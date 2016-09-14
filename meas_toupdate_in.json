@@ -1,0 +1,72 @@
+{
+	"individual measures": 
+	[
+		{
+			"name": "Thermoelastic Heat Pump (Prospective)",
+			"markets": null,
+			"measure_type": "full service",
+			"installed_cost": {
+				"residential": 5300,
+				"commercial": {
+					"new": 261,
+					"retrofit": 283}},
+			"cost_units": {
+				"residential": "2015$/unit",
+				"commercial": "2015$/kBtu/h cooling"},
+			"installed_cost_source": "EIA. (2015). Updated Buildings Sector Appliance and Equipment Costs and Efficiencies - 2020 (High), p. 37 (residential) and p. 103 (commercial)",
+			"energy_efficiency": {
+				"primary": 6,
+				"secondary": null},
+			"energy_efficiency_units": {
+				"primary": {
+					"residential": "COP",
+					"commercial": "BTU out/BTU in"},
+				"secondary": null},
+			"energy_efficiency_source": "Navigant Consulting. (2014). Energy Savings Potential and RD&D Opportunities for Non-Vapor Compression HVAC Technologies, p. 107",
+			"market_entry_year": 2020,
+			"market_entry_year_source": "Estimated based on low Technology Readiness Level of the technology at time ECM was added",
+			"market_exit_year": null,
+			"market_exit_year_source": "NA",
+			"market_scaling_fractions": null,
+			"market_scaling_fractions_source": "NA",
+			"product_lifetime": 14,
+			"product_lifetime_units": "years",
+			"product_lifetime_source": "Median of minimum and maximum lifetime values listed for residential central AC equipment (7 and 21 years, respectively) in the 'rsclass.txt' file of the National Energy Modeling System (NEMS) Reference Case run. For more details on this file, see: EIA. (2014). Residential Demand Module of the National Energy Modeling System: Model Documentation 2014, p. 28",
+			"climate_zone": ["AIA_CZ1", "AIA_CZ2", "AIA_CZ3","AIA_CZ4", "AIA_CZ5"],
+			"bldg_type": [
+				"single family home","multi family home","mobile home",
+				"assembly", "education", "food sales", "food service",
+		        "health care", "lodging", "large office", "small office",
+		        "mercantile/service", "warehouse", "other"],
+			"structure_type": ["new", "existing"],
+			"fuel_type": {
+				"primary": ["electricity"],
+				"secondary": null},
+			"fuel_switch_to": null,
+			"end_use": {
+				"primary": ["cooling", "heating"],
+		        "secondary": null},
+			"technology_type": {
+				"primary": "supply", "secondary": null},
+			"technology": {
+				"primary": [
+					"central AC", "ASHP",
+					"rooftop_ASHP-heat", "rooftop_ASHP-cool", "rooftop_AC"],
+				"secondary": null},
+			"_description": "A thermoelastic heat pump uses the unique properties of a shape memory alloy (SMA) or special polymers to absorb heat from, or reject heat to, their surroundings as it stresses and releases a SMA core. This technology is in the early stages of R&D, with proof-of-concept prototype development underway for HVAC applications (source: Goetzler et al. (2014). Alternatives to Vapor Compression HVAC Technology. ASHRAE Journal, p. 16)",
+			"_notes": "This ECM is assumed to be a drop in replacement for existing residential and commercial electric heating and cooling systems",
+			"_added_by": {
+				"name": "Jared Langevin",
+				"organization": "U.S. Department of Energy",
+				"email": "jared.langevin@ee.doe.gov",
+				"timestamp": "2016-09-12 20:49:57"
+			},
+			"_updated_by": {
+				"name": null,
+				"organization": null,
+				"email": null,
+				"timestamp": null
+			}
+		}],
+	"measure packages": {}
+}
