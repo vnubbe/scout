@@ -84,7 +84,7 @@ If you'd like to confirm that numpy was installed successfully, you can start Py
 
    python3
 
-and import numpy (within the Python interactive shell, indicated by the ``>>>`` prompt).:: 
+and import numpy (within the Python interactive shell, indicated by the ``>>>`` prompt). :: 
 
    import numpy
 
@@ -197,6 +197,7 @@ Once Python 3 installation is complete, the numpy package needs to be installed.
 
    py -3 -m pip install numpy
 
+.. _Open a command prompt:
 .. _opening a command prompt: http://www.digitalcitizen.life/7-ways-launch-command-prompt-windows-7-windows-8
 
 3. Install a text editor
@@ -209,10 +210,49 @@ Sublime Text is an easy to use cross-platform text editor that can be configured
 4. Install R
 ~~~~~~~~~~~~
 
-Download R from CRAN_ and run the executable, again following the instructions in the installer. The downloads page includes links to pages with additional details regarding installation and the configuration of R specific to Windows. In particular, the `R FAQ explains`_ whether you should use the 32-bit or 64-bit version of R. After running the R installer, no further configuration is required for this initial setup.
+Download R from CRAN_ and run the executable, again following the instructions in the installer. The downloads page includes links to pages with additional details regarding installation and the configuration of R specific to Windows. In particular, the `R FAQ explains`_ whether you should use the 32-bit or 64-bit version of R. (You can follow `these instructions`_ from Microsoft if you are unsure of whether your computer is running 32-bit or 64-bit Windows.) After running the R installer, no further configuration of R is required for this initial setup.
 
 .. _CRAN: https://cloud.r-project.org/bin/windows/base/
 .. _R FAQ explains: https://cloud.r-project.org/bin/windows/base/rw-FAQ.html#Should-I-run-32_002dbit-or-64_002dbit-R_003f
+.. _these instructions: https://support.microsoft.com/en-us/help/827218/how-to-determine-whether-a-computer-is-running-a-32-bit-version-or-64-bit-version-of-the-windows-operating-system
+
+5. Install Perl
+~~~~~~~~~~~~~~~
+
+1. Verify status of Perl installation
+*************************************
+
+Before installing Perl, confirm that it is not already installed on your system. `Open a command prompt`_ window and at the prompt, type::
+
+   perl -v
+
+If you get a response that begins with ``'perl' is not recognized``, Perl is not installed on your system and you should continue to the next step. If you get a response that includes a version number for Perl, you have a valid Perl installation on your system and no further configuration of your system is required before moving on to the :ref:`tutorials`.
+
+2. Download and install Perl
+****************************
+
+From the `Strawberry Perl website`_, download the "recommended version" that is appropriate for your system configuration, either 32- or 64-bit. Open the Strawberry Perl installer and follow the instructions to complete the installation of Perl.
+
+.. _Strawberry Perl website: http://strawberryperl.com
+
+No further steps are required to set up Perl. If you would like to verify that the installation was successful, open a command prompt and type ``perl -v`` again. The response should indicate that a version of Perl is now installed. If not, visit the `Strawberry Perl support page`_ for additional resources.
+
+.. _Strawberry Perl support page: http://strawberryperl.com/support.html
+
+3. (Optional) Verify Perl installation in R
+*******************************************
+
+Perl is required for one of the packages that Scout uses in R. If you would like, you can verify that your Perl installation is recognized in R. To begin, open R (sometimes called R GUI) from the Start Menu. In the R console window that opens, at the prompt (indicated by a ">" character), type::
+
+   install.packages("WriteXLS")
+
+You will be prompted to select a "CRAN mirror," which is the server from which you will download the "WriteXLS" package. Once the installation is complete, at the R prompt, type::
+
+   library("WriteXLS")
+   testPerl()
+
+If your Perl installation is successfully recognized by R, the messages "Perl found." and "All required Perl modules were found." will print to the R console. 
+   
 
 .. rubric:: Footnotes
 .. [#] pip/pip3 is typically installed at the same time that Python 3 is installed.
